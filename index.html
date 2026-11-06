@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>你个扎啤</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 5vw;
+    font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+    background: radial-gradient(circle at 30% 20%, #2b3a67 0%, #12172b 55%, #080a12 100%);
+    overflow: hidden;
+  }
+
+  /* 背景柔光，让画面不那么死板 */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    background:
+      radial-gradient(circle at 70% 80%, rgba(120, 160, 255, .28), transparent 55%),
+      radial-gradient(circle at 15% 75%, rgba(255, 140, 190, .18), transparent 50%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+
+  h1 {
+    position: relative;
+    max-width: 14em;
+    font-size: clamp(2.6rem, 12vw, 9rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-align: center;
+    text-wrap: balance;
+    background: linear-gradient(100deg, #ffffff 15%, #bfd4ff 45%, #ffd6e7 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 40px rgba(90, 130, 255, .35));
+    animation: rise .9s cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(26px) scale(.98); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    h1 { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <h1>你个扎啤</h1>
+</body>
+</html>

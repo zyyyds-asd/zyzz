@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers 静态资源配置
+  // 告诉 `npx wrangler deploy` 静态文件在哪个目录
+  "name": "zyyyds-asd",
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "single-page-application"
+  }
+}
